@@ -18,6 +18,7 @@ public class EulerSolutionTest {
 	@Test
 	public void test() {
 		assertEquals("Testing",new PSkeleton().run());
+		assertEquals("233168",new P001().run());
 	}
 
 }
