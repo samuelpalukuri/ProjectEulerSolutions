@@ -22,11 +22,7 @@ public class PSkeleton implements EulerSolution {
 		
 		System.out.println(new PSkeleton().run());
 		
-		long endTime = System.nanoTime();
-		
-		System.out.print("Time taken to execute program is ");
-		System.out.print((endTime - startTime) + " ns or ");
-		System.out.println((endTime - startTime)/1000.0 + " ms");
+		Library.printTimeTaken(startTime);
 		
 	}
 	
