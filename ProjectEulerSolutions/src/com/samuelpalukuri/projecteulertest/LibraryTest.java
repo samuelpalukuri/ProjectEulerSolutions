@@ -16,7 +16,7 @@ import com.samuelpalukuri.projecteuler.Library;
 public class LibraryTest {
 
 	@Test
-	public void test() {
+	public void testIsPrime() {
 		assertEquals(true,Library.isPrime(3));
 		assertEquals(true,Library.isPrime(17));
 		assertEquals(false,Library.isPrime(18));
