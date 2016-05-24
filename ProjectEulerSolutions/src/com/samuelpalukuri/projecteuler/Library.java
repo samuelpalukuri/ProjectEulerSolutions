@@ -18,6 +18,10 @@ public class Library {
 	 */
 	public static boolean isPrime(long input) {
 		
+		if (input <= 1) {
+			throw new IllegalArgumentException("Primality can be tested only for numbers >= 2");
+		}
+		
 		//Spl condition to handle 2 and 3 as these are corner cases
 		if ( input == 2 || input == 3 ) {
 			return true;

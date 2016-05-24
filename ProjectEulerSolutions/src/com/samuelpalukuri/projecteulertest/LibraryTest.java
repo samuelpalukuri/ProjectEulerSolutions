@@ -21,5 +21,10 @@ public class LibraryTest {
 		assertEquals(true,Library.isPrime(17));
 		assertEquals(false,Library.isPrime(18));
 	}
+	
+	@Test(expected=IllegalArgumentException.class)
+	public void testIsPrimeInvalid1() {
+		Library.isPrime(-1000000);
+	}
 
 }
