@@ -26,5 +26,17 @@ public class LibraryTest {
 	public void testIsPrimeInvalid1() {
 		Library.isPrime(-1000000);
 	}
+	
+	@Test
+	public void testIsPalindrome() {
+		assertEquals(true,Library.isPalindrome(101L));
+		assertEquals(false,Library.isPalindrome(1010L));
+		assertEquals(true,Library.isPalindrome(10101L));
+	}
+	
+	@Test(expected=IllegalArgumentException.class)
+	public void testIsPalindromInvalid1() {
+		Library.isPalindrome(-1L);
+	}
 
 }

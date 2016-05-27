@@ -45,6 +45,29 @@ public class Library {
 	}
 	
 	/**
+	 * Validate if number received as input is a palindrome or not
+	 * Palindrome is a number which reads same both ways. For example, 10101
+	 * @param input Number to be tested
+	 * @return boolean True, if input is a palindrome
+	 */
+	public static boolean isPalindrome( long input) {
+		
+		if (input < 0) {
+			throw new IllegalArgumentException("Palindrome test needs number >= 0");
+		}
+		
+		long reversedInput = 0L;
+		long safeInput = input;
+		
+		do {
+			reversedInput = reversedInput*10 + input%10;
+			input = input/10;
+		} while (input != 0);
+		
+		return (reversedInput == safeInput ? true : false);
+	}
+	
+	/**
 	 * Print time taken to execute the program. Capture the start time before
 	 * execution of main program and pass this value at end of program
 	 * @param startTime
