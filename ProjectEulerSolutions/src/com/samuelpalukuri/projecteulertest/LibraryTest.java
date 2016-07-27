@@ -38,5 +38,20 @@ public class LibraryTest {
 	public void testIsPalindromInvalid1() {
 		Library.isPalindrome(-1L);
 	}
+	
+	@Test
+	public void testFindGCD() {
+		assertEquals(6L,Library.findGCD(12L, 30L));
+		assertEquals(54L,Library.findGCD(216L, 594L));
+	}
 
+	@Test(expected=IllegalArgumentException.class)
+	public void testFindGCDInvalid1() {
+		Library.findGCD(5, -10);
+	}
+	
+	@Test(expected=IllegalArgumentException.class)
+	public void testFindGCDInvalid2() {
+		Library.findGCD(0, 11);
+	}
 }

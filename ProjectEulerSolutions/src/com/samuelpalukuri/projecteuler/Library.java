@@ -67,6 +67,46 @@ public class Library {
 		return (reversedInput == safeInput ? true : false);
 	}
 	
+	
+	/**
+	 * Return Greatest Common Divisor of two numbers
+	 * @param num1 Number 1
+	 * @param num2 Number 2
+	 * @return long GCD of number 1 and number 2
+	 */
+	public static long findGCD(long num1, long num2) {
+		
+		if (num1 <= 0 || num2 <= 0) {
+			throw new IllegalArgumentException("No number being passed should be zero or less than zero!");
+		}
+		
+		if (num1 == num2) {
+			throw new IllegalArgumentException("Numbers being passed shouldn't be equal");
+		}
+		
+		//Swap num1 and num2 if needed so that num1 is always greater than num2
+		//Use temp variable as the numbers could be too big to rely on swap w/o a temp variable
+		long temp;
+		
+		if(num1 < num2) {
+			temp = num1;
+			num1 = num2;
+			num2 = temp;
+		}	
+		
+		//Euclidean algorithm for GCD
+		//Divide num1 by num 2
+		//Divide num by remainder from above division
+		//Repeat until remainder is zero. The last divisor is the GCD
+		while (num1 % num2 != 0) {
+			temp = num1;
+			num1 = num2;
+			num2 = temp % num2;
+		}
+					
+		return num2;
+	}
+	
 	/**
 	 * Print time taken to execute the program. Capture the start time before
 	 * execution of main program and pass this value at end of program
