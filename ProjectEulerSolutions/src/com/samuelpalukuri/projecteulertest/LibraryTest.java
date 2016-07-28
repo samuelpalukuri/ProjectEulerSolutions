@@ -54,4 +54,24 @@ public class LibraryTest {
 	public void testFindGCDInvalid2() {
 		Library.findGCD(0, 11);
 	}
+	
+	@Test
+	public void testSumNNaturalNum() {
+		assertEquals(55, Library.sumNNaturalNum(10L));
+	}
+	
+	@Test(expected=IllegalArgumentException.class)
+	public void testSumNNaturalNumInvalid1() {
+		Library.sumNNaturalNum(0);
+	}
+	
+	@Test
+	public void testSumSquareNNaturalNum() {
+		assertEquals(385, Library.sumSquareNNaturalNum(10L));
+	}
+	
+	@Test(expected=IllegalArgumentException.class)
+	public void testSumSquareNNaturalNumInvalid1() {
+		Library.sumSquareNNaturalNum(-10);
+	}
 }

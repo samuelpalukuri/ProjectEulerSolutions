@@ -108,6 +108,31 @@ public class Library {
 	}
 	
 	/**
+	 * Return sum of first N natural numbers
+	 * @param input The number of numbers for which summation is required 
+	 * @return long Sum of first N natural numbers
+	 */
+	public static long sumNNaturalNum (long input) {
+		if (input <= 0) {
+			throw new IllegalArgumentException("Arguments passed should not be less than or equal to zero");
+		}
+		return (input * (input + 1)) / 2;
+	}
+	
+	/**
+	 * Return sum of squares of first N natural numbers
+	 * @param input The number of numbers for which summation of squares is required
+	 * @return long Sum of squares of first N natural numbers
+	 */
+	public static long sumSquareNNaturalNum(long input) {
+		if(input <= 0) {
+			throw new IllegalArgumentException("Arguments passed should not be less than or equal to zero");
+		}
+		return (input * (input + 1) * ((2 * input) + 1)) / 6;
+	}
+	
+	
+	/**
 	 * Print time taken to execute the program. Capture the start time before
 	 * execution of main program and pass this value at end of program
 	 * @param startTime
