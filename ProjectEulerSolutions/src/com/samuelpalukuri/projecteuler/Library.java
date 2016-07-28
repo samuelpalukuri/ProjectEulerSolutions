@@ -35,7 +35,7 @@ public class Library {
 		 * Check divisibility by every odd number starting from 3
 		 * till square root of input number.
 		 */
-		for (long i = 3; i*i < input; i += 2) {
+		for (long i = 3; i*i <= input; i += 2) {
 			if ( input % i == 0) {
 				return false;
 			}
