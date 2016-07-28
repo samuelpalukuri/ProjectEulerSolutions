@@ -24,6 +24,7 @@ public class EulerSolutionTest {
 		assertEquals("906609", new P004().run());
 		assertEquals("232792560", new P005().run());
 		assertEquals("25164150", new P006().run());
+		assertEquals("104743", new P007().run());
 	}
 
 }
