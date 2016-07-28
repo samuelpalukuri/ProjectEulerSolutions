@@ -77,4 +77,15 @@ public class LibraryTest {
 	public void testSumSquareNNaturalNumInvalid1() {
 		Library.sumSquareNNaturalNum(-10);
 	}
+	
+	@Test
+	public void testProductOfDigits() {
+		assertEquals(0,Library.productOfDigits(1200));
+		assertEquals(15,Library.productOfDigits(153));
+	}
+	
+	@Test(expected=IllegalArgumentException.class)
+	public void testProductOfDigitsInvalid1() {
+		Library.productOfDigits(-5);
+	}
 }

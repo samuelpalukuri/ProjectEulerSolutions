@@ -131,6 +131,31 @@ public class Library {
 		return (input * (input + 1) * ((2 * input) + 1)) / 6;
 	}
 	
+	/**
+	 * Return product of digits of input parameter
+	 * @param input The number whose product of digits is required
+	 * @return long product of digits;
+	 */
+	public static long productOfDigits(long input) {
+		
+		if(input < 0) {
+			throw new IllegalArgumentException("Number passed should be >= 0");
+		}
+		
+		long product = 1;
+		
+		do {
+			product *= input % 10;
+			
+			if (product == 0) {
+				break;
+			}
+			
+			input = input / 10;
+		} while (input != 0);
+		
+		return product;
+	}
 	
 	/**
 	 * Print time taken to execute the program. Capture the start time before
